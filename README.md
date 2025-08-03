@@ -121,17 +121,72 @@ A user-friendly, full-stack web application for posting jobs, managing applicati
 
 
 
+<img width="576" height="360" alt="1" src="https://github.com/user-attachments/assets/f9296516-ec3a-4eca-9ec5-896c53d7210a" />
+
+
+
+
+<img width="576" height="360" alt="2" src="https://github.com/user-attachments/assets/93d00508-5850-4b7b-8eef-c5f065816400" />
+
+
+
+<img width="576" height="360" alt="3" src="https://github.com/user-attachments/assets/ff2b2dc9-023a-4f79-b767-561fa5c269a4" />
+
+
+
+<img width="576" height="360" alt="4" src="https://github.com/user-attachments/assets/dd3097c1-2607-4e04-9483-69a10bf0f4e3" />
+
+
+
+
+<img width="576" height="360" alt="5" src="https://github.com/user-attachments/assets/0b22f63a-0cae-473d-a24c-ab6961b2799a" />
+
+
+
+<img width="576" height="360" alt="6" src="https://github.com/user-attachments/assets/31cb84ff-f0b3-43a1-8ee2-c359180fa436" />
+
+
+
+
+<img width="576" height="360" alt="7" src="https://github.com/user-attachments/assets/d0950f98-182d-4863-a9c2-a7490570943e" />
+
+
+
+<img width="576" height="360" alt="8" src="https://github.com/user-attachments/assets/9f1b3131-eb66-4053-bc32-2da3d1a4b413" />
 
 
 
 
 
+<img width="576" height="360" alt="9" src="https://github.com/user-attachments/assets/2840ee3d-16ba-41b5-8851-ebd1e47c66da" />
 
 
 
 
 
+<img width="576" height="360" alt="10" src="https://github.com/user-attachments/assets/f0bf041f-c1be-4922-a9cb-c58ce19c60cf" />
 
 
+
+
+
+<img width="577" height="369" alt="12" src="https://github.com/user-attachments/assets/aaed5d98-b7b1-43c3-948e-18a12037d566" />
+
+
+
+
+
+<img width="577" height="369" alt="13" src="https://github.com/user-attachments/assets/7f9b9af9-59e4-462e-b6b0-e067c39470aa" />
+
+
+
+
+<img width="577" height="369" alt="14" src="https://github.com/user-attachments/assets/618b25b2-7165-4b8a-a0fc-7c7e6f66da91" />
+
+
+
+
+
+<img width="577" height="369" alt="15" src="https://github.com/user-attachments/assets/91bbaeef-cfdc-4adb-ad5c-c49f12b80664" />
 
 
