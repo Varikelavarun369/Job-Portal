@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0e0e0; 
+        }*{
+            text-decoration: none;
+        }
+        .navbar{
+            background:  skyblue; font-family: calibri; padding-right: 15px;padding-left: 15px;
+        }
+        .navdiv{
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .logo a{
+            font-size: 35px; 
+            font-weight: bold;
+            color: black;
+            font-family:"Times New Roman",Times,serif;
+        
+        }
+        li{
+            list-style: none; display: inline-block;
+        }
+        li a{
+            color: white; font-size: 18px; font-weight: bold; margin-right: 25px;
+        }
+        button{
+            background-color: black; margin-left: 10px; border-radius: 10px; padding: 10px; width: 90px;
+        }
+        button a{
+            color: white; font-weight: bold; font-size: 15px;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 700px;
+            margin: 20px auto; 
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        form {
+            display: grid;
+            gap: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            margin: 0;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            margin-right: 8px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            background-color: #e0e0e0;
+            color: black;
+            border: none;
+            padding: 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color:skyblue;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+		<div class="navdiv">
+			<div class="logo"><a href="#">JOB SCOUT</a> </div>
+			<ul>
+				<li><a href="{{url_for('admin_home')}}">Home</a></li>
+				<li><a href="{{url_for('manage_jobs')}}">Manage Job</a></li>
+                <li><a href="{{url_for('add_jobs')}}">Add Jobs</a></li>
+				<li><a href="{{url_for('home')}}">logout</a></li>
+			</ul>
+		</div>
+	</nav>
+    <div class="form-container">
+        <h2>Add Job</h2>
+        <form method="POST">
+            <input type="text" name="position" placeholder="Position" required>
+            <input type="text" name="company" placeholder="Company" required>
+            <select name="job-type">
+                <option value="Part-Time">Part-Time</option>
+                <option value="Full-Time">Full-Time</option>
+                <option value="Internship">Internship</option>
+            </select>
+            <input type="text" name="salary" placeholder="Salary" required>
+            <input type="date" name="job-deadline" required>
+            <input type="text" name="location" placeholder="Location" required>
+            <input type="number" name="vacancy" placeholder="Vacancy">
+            <label>Skills:</label>
+            <input type="checkbox" name="skills" value="html">HTML
+            <input type="checkbox" name="skills" value="css">CSS
+            <input type="checkbox" name="skills" value="python">Python
+            <input type="checkbox" name="skills" value="java">Java
+            <input type="checkbox" name="skills" value="sql">SQL
+            <input type="checkbox" name="skills" value="data-science">Data Science
+            <input type="email" name="contact-mail" placeholder="Contact Email" required>
+            <textarea name="job-description" placeholder="Job Description" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

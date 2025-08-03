@@ -1,0 +1,75 @@
+body::after {
+    content: "";
+    background: url('../images/job.jpg');
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;  
+    z-index: -1;  
+    background-repeat: no-repeat; 
+    background-size: cover;
+  }
+h3{
+    text-align:center;
+    color:skyblue;
+    margin-bottom: 3px;
+}
+h4{
+    color:skyblue;
+    text-align:center;
+    margin:4px 0px 0px 0px;
+}.container{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+}
+.login-form{
+    background-color:"#ffffff";
+    display:flex;
+    flex-direction:column;
+    width:350px;
+    padding:15px;
+    border:1px solid skyblue;
+    border-radius:5px;
+    align-items: center;
+}
+.butt{
+    height:35px;
+    margin:5px 0px 0px 10px;
+    background-color:skyblue;
+    border-radius:25px;
+    color:#333;
+    border-width:5px;
+    height:40px;
+    width:270px;
+    border-style:inset;
+}
+.butt:hover{
+    background-color:#333;
+    color:skyblue;
+}
+.container{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+form input {
+    padding:8px;
+    margin-left: 15px;
+    width:270px;
+    padding:15px;
+    border: solid 2px  #333 ;
+    
+}
+form{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}

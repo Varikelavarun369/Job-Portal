@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/home.css')}}"/>
+	<title>Navigation Bar</title>
+</head>
+<body>
+	<nav class="navbar">
+		<div class="navdiv">
+			<div class="logo"><a href="#">JOB SCOUT</a> </div>
+			<ul>
+				<li><a href="{{url_for('home')}}">Home</a></li>
+				<button><a href="{{url_for('login')}}">Login</a></button>
+			</ul>
+		</div>
+	</nav>
+    <section class="container">
+        <div class="content__container">
+          <h1>
+            Land Your<br />
+            <span class="heading__1">Dream Position</span><br />
+          </h1>
+          <p class="para">
+            Opportunities don't happen, you create them.
+          </p>
+        </div>
+        <div class="image__container">
+          <img src="{{url_for('static',filename='images/home.jpg')}}" alt="header" />
+          <img src="{{url_for('static',filename='images/home1.jpg')}}" alt="header" />
+        </div>
+      </section>
+    </body>
+  </html>
+</body>
+</html>

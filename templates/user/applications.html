@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Applications</title>
+    <style>
+        *{
+            text-decoration: none;
+        }
+        .navbar{
+            background:  skyblue; font-family: calibri; padding-right: 15px;padding-left: 15px;
+        }
+        .navdiv{
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .logo a{
+            font-size: 35px; 
+            font-weight: bold;
+            color: black;
+            font-family:"Times New Roman",Times,serif;
+        }
+        li{
+            list-style: none; display: inline-block;
+        }
+        li a{
+            color: white; font-size: 18px; font-weight: bold; margin-right: 25px;
+        }
+        button{
+            background-color: black; margin-left: 10px; border-radius: 10px; padding: 10px; width: 90px;
+        }
+        button a{
+            color: white; font-weight: bold; font-size: 15px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+		<div class="navdiv">
+			<div class="logo"><a href="#">JOB SCOUT</a> </div>
+			<ul>
+				<li><a href="{{url_for('user_home')}}">Home</a></li>
+				<li><a href="{{url_for('jobs')}}">Job</a></li>
+                <li><a href="{{url_for('applications')}}">Applications</a></li>
+				<li><a href="{{url_for('home')}}">logout</a></li>
+			</ul>
+		</div>
+	</nav>
+
+    <div id="applications" class="container">
+        <h1>My Applications</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Job Position</th>
+                    <th>Company</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for application in applications %}
+                <tr>
+                    <td>{{ application.position }}</td>
+                    <td>{{ application.company }}</td>
+                    <td>{{ application.status }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

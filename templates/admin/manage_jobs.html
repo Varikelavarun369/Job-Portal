@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0e0e0;
+        }
+        *{
+            text-decoration: none;
+        }
+        .navbar{
+            background:  skyblue; font-family: calibri; padding-right: 15px;padding-left: 15px;
+        }
+        .navdiv{
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .logo a{
+            font-size: 35px; 
+            font-weight: bold;
+            color: black;
+            font-family:"Times New Roman",Times,serif;
+        
+        }
+        li{
+            list-style: none; display: inline-block;
+        }
+        li a{
+            color: white; font-size: 18px; font-weight: bold; margin-right: 25px;
+        }
+        button{
+            background-color: black; margin-left: 10px; border-radius: 10px; padding: 10px; width: 90px;
+        }
+        button a{
+            color: white; font-weight: bold; font-size: 15px;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 80%;
+            max-width: 700px;
+            margin: 20px auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        form {
+            display: grid;
+            gap: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            margin: 0;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            margin-right: 8px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            background-color:black;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 30%;
+        }
+
+        button:hover {
+            background-color: skyblue;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        button.edit-btn {
+            background-color: #add8e6; /* Light Blue */
+        }
+
+        button.delete-btn {
+            background-color: skyblue; /* Light Coral */
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+		<div class="navdiv">
+			<div class="logo"><a href="#">JOB SCOUT</a> </div>
+			<ul>
+				<li><a href="{{url_for('admin_home')}}">Home</a></li>
+				<li><a href="{{url_for('manage_jobs')}}">Manage Job</a></li>
+                <li><a href="{{url_for('add_jobs')}}">Add Jobs</a></li>
+				<li><a href="{{url_for('home')}}">logout</a></li>
+			</ul>
+		</div>
+	</nav>
+    <div class="container">
+        <h1>Manage Jobs</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Job Position</th>
+                <th>Company</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for job in jobs %}
+            <tr>
+                <td>{{ job.position }}</td>
+                <td>{{ job.company }}</td>
+                <td>
+                    <form action="{{ url_for('delete_job', job_id=job._id) }}" method="POST" style="display:inline;">
+                        <button type="submit">Delete</button>
+                    </form> &nbsp &nbsp;
+                    <a href="{{ url_for('edit_job', job_id=job._id) }}">&nbsp &nbsp &nbsp &nbsp Edit</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+</body>
+</html>

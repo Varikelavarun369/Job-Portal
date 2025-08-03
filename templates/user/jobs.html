@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jobs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    * {
+      text-decoration: none;
+      box-sizing: border-box;
+    }
+
+    /* Navbar styling */
+    .navbar {
+      background: skyblue;
+      font-family: calibri;
+      padding: 15px;
+    }
+
+    .navdiv {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo a {
+      font-size: 35px;
+      font-weight: bold;
+      color: black;
+      font-family: "Times New Roman", Times, serif;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+      display: inline-block;
+    }
+
+    li a {
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      margin-right: 25px;
+    }
+
+    /* Main container for job listing */
+    .job-container {
+      max-width: 1100px;
+      margin: 20px auto; /* Center the job container */
+      padding: 10px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .job-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+
+    /* Job card styling */
+    .job {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: calc(33% - 20px); /* Fit three columns */
+      box-sizing: border-box;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .job h3 {
+      margin-top: 0;
+      font-size: 20px;
+      color: #333;
+    }
+
+    .job p {
+      margin: 10px 0;
+      color: #666;
+      font-size: 14px;
+    }
+
+    .job a {
+      display: block;
+      margin-top: 10px;
+      background-color:black;
+      color: white;
+      padding: 10px;
+      border-radius: 4px;
+      text-align: center;
+      font-size: 16px;
+      text-decoration: none;
+    }
+
+    .job a:hover {
+      background-color: skyblue;
+    }
+
+    .job:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Responsive design */
+    @media (max-width: 900px) {
+      .job {
+        width: calc(50% - 20px); /* Two columns for medium screens */
+      }
+    }
+
+    @media (max-width: 600px) {
+      .job {
+        width: 100%; /* Single column for small screens */
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navdiv">
+      <div class="logo"><a href="#">JOB SCOUT</a></div>
+      <ul>
+        <li><a href="{{url_for('user_home')}}">Home</a></li>
+        <li><a href="{{url_for('jobs')}}">Job</a></li>
+        <li><a href="{{url_for('applications')}}">Applications</a></li>
+        <li><a href="{{url_for('home')}}">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="job-container">
+    <h1>Available Jobs</h1>
+    <div class="job-list">
+      {% for job in jobs %}
+      <div class="job">
+        <h3>{{ job.position }}</h3>
+        <p><strong>Company:</strong> {{ job.company }}</p>
+        <p><strong>Description:</strong> {{ job.job_description }}</p>
+        <a href="{{ url_for('apply_job', job_id=job._id) }}">Apply</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+</body>
+</html>
