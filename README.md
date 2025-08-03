@@ -86,6 +86,8 @@ A user-friendly, full-stack web application for posting jobs, managing applicati
 
 
 
+
+
 🛠 Tech Stack
 
 | Component    | Technology            |
@@ -93,6 +95,41 @@ A user-friendly, full-stack web application for posting jobs, managing applicati
 | **Frontend** | HTML, CSS, JavaScript |
 | **Backend**  | Flask (Python)        |
 | **Database** | MongoDB               |
+
+<br>
+
+
+
+
+
+
+
+🐍  Python Libraries and Their Role
+
+
+| **Library**  | **Purpose & Functionality**                                                                         |
+| ------------ | --------------------------------------------------------------------------------------------------- |
+| **Flask**    | Web framework for routing, HTTP requests, session management, and rendering templates.              |
+| **PyMongo**  | MongoDB driver for Python; manages all database operations (CRUD on users, jobs, and applications). |
+| **Werkzeug** | Secure password hashing, password verification, and safe file upload/filename handling.             |
+| **OS**       | Manages file operations on the server (CV upload folder creation, file path checks, etc.).          |
+| **Datetime** | Handles and formats dates/times: e.g., application dates, job deadlines, registration timestamps.   |
+
+<br>
+
+📸 Screenshots
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
