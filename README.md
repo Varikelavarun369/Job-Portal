@@ -1,16 +1,8 @@
 🌐 Job Portal
 
-A user-friendly full-stack job portal for posting jobs, managing applications, and streamlining recruitment workflows.Built using Flask and MongoDB, this system supports role-based access for Admins and Applicants, enabling:
+A user-friendly, full-stack web application for posting jobs, managing applications, and administering recruitment workflows.Built using Flask and MongoDB, this project supports role-based access for users and administrators, allowing for job posting, CV uploads, and application tracking.
 
-✔ Job Posting
-
-✔ CV Uploads
-
-✔ Application Tracking
 <br>
-
-
-
 
 
 
@@ -23,12 +15,24 @@ A user-friendly full-stack job portal for posting jobs, managing applications, a
 
 ✔ Role selection (Admin or Applicant)
 
+<br>
+
+
+
+
 
 🛠 Admin Panel
 
 ✔ Add, edit, and delete job listings (role-protected)
 
 ✔ Manage and track all job postings and received applications
+
+<br>
+
+
+
+
+
 
 
 👤 User Panel
@@ -39,15 +43,34 @@ A user-friendly full-stack job portal for posting jobs, managing applications, a
 
 ✔ View and monitor application status
 
+<br>
+
+
+
+
+
+
 
 📂 Application Management
 
 ✔ All application and job data stored in MongoDB
 
+<br>
+
+
+
+
+
+
 
 🔒 Secure File Uploads
 
 ✔ CV uploads validated and stored securely on the server
+
+<br>
+
+
+
 
 
 🎨 Responsive UI
@@ -55,6 +78,22 @@ A user-friendly full-stack job portal for posting jobs, managing applications, a
 ✔ Clean, modular HTML templates
 
 ✔ Dedicated CSS files for each section
+
+<br>
+
+
+
+
+
+
+🛠 Tech Stack
+
+| Component    | Technology            |
+| ------------ | --------------------- |
+| **Frontend** | HTML, CSS, JavaScript |
+| **Backend**  | Flask (Python)        |
+| **Database** | MongoDB               |
+
 
 
 
